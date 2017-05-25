@@ -1,0 +1,49 @@
+
+Fichier DTD:OUE
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+ <!ELEMENT   oue (inscription_personne)*>
+ <!ELEMENT  inscription_personne (nom ,prenom ,date_de_naissance, lieu_dhabibation, niveau_detude, genre, situation_matrimoniale, competence+, email, telephone)>
+ <!ELEMENT nom (#PCDATA)>
+ <!ELEMENT prenom (#PCDATA)>
+ <!ELEMENT date_de_naissance (#PCDATA)>
+ <!ELEMENT lieu_dhabibation (#PCDATA)>
+ <!ELEMENT niveau_detude (#PCDATA)>
+ <!ELEMENT genre (#PCDATA)>
+ <!ELEMENT situation_matrimoniale (#PCDATA)>
+ <!ELEMENT competence (#PCDATA)>
+ <!ELEMENT email (#PCDATA)>
+ <!ELEMENT telephone (#PCDATA)>                    
+
+
+ Fichier XML:oue.dtd
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE oue SYSTEM "oue.dtd">
+<oue>
+	<inscription_personne>
+		<nom> OUEDRAOGO</nom>
+		<prenom> Mariam</prenom>
+		<date_de_naissance>06-06-1993</date_de_naissance>
+		<lieu_dhabibation> KOUMASSI</lieu_dhabibation>
+		<niveau_detude> MASTER1_Reseau_Telecommunication</niveau_detude>
+		<genre> feminin</genre>
+		<situation_matrimoniale>celibataire</situation_matrimoniale>
+		<competence> CODEUSE </competence>
+		<email>ouedra87@outlook.fr</email>
+		<telephone>57955506</telephone>
+	</inscription_personne>
+</oue>
+
+DECLARATION DES BALISES:
+
+l'element oue est composé des trois premiers lettres de mon NOM(OUEDRAOGO).
+inscription_personne* signifie que dans l'element <oue> on peut trouver de 0 à plusieurs éléments de type <inscription_personne> à l'exclusion de tout autre élément
+nom, prenom, date_de_naissance, lieu_dhabibation, niveau_detude, genre, situation_matrimoniale, competence+, email ,telephone veut dire que dans un élément inscription_personne on doit trouver un et un seul (*) élément <nom>, 
+un et un seul (*) élément <prenom>, un et un seul (*) élément <date_de_naissance>, un et un seul (*) élément <lieu_dhabibation>, un et un seul (*) élément <niveau_detude>, un et un seul (*) élément <genre>, un et un seul (*) élément <situation_matrimoniale>, un ou plusieurs (+) éléments <competence+>, un et un seul (*) élément <email> et un et un seul (*) élément <telephone> et dans cet ordre (comme imposé par la virgule).
+<nom>, <prenom>, <date_de_naissance>, <lieu_dhabibation>, <niveau_detude>, <genre>,<situation_matrimoniale>, <competence+>, <email>, <telephone> sont des éléments qui peuvent contenir du texte comme l'indique #PCDATA.
+On parle de contenu mixte(contenir un mélange de texte et d'éléments).
+
+
+
+
